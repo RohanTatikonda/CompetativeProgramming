@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Problem231A {
+ public static void main(String[] args) {
+	 Scanner sample = new Scanner(System.in);
+	 int n = sample.nextInt();
+	 int check = 0;
+	 int count = 0;
+	 for (int i = 0; i < n; i++) {
+		 int a = sample.nextInt();
+		 int b = sample.nextInt();
+		 int c = sample.nextInt();
+		 if ( a == 1) {
+			 check++;
+		 }
+		 if (b == 1) { 
+			 check++;
+		 }
+		 if (c == 1) { 
+			 check++;
+		 }
+		 if (check >= 2) {
+			 count++;
+		 }
+		 check = 0;
+	 }
+	 System.out.println(count);
+ }
+}
