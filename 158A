@@ -1,0 +1,23 @@
+import java.util.Scanner;
+	public class Problem158A {
+		public static void main(String[] args) {
+			Scanner sample = new Scanner(System.in);
+			int n = sample.nextInt();
+			int k = sample.nextInt();
+			int count = 0;
+			int a[] = new int[n];
+			for(int i = 0; i<n; i++) {
+				a[i] = sample.nextInt();
+			}
+			int check = a[k-1];
+			for(int j = 0; j <n; j++) {
+				if(a[j] >= check && (check != 0 || a[j] != 0)) {
+					count++;
+				}
+				else if (a[j] < check) {
+					break;
+				}
+			}
+			System.out.println(count);
+		}
+	}
